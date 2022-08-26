@@ -5,8 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   root to: "lists#index"
   resources :lists, except: [:index] do
-    resources :movies do
-      resources :bookmarks
-    end
+    resources :bookmarks
   end
 end

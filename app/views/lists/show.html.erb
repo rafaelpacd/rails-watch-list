@@ -1,8 +1,11 @@
 <p><strong>Movies</strong></p>
+<%= cl_image_tag("",
+      width: 400, height: 300, crop: :fill) %>
 <ul class="list-group">
   <% @list.movies.each do |movie| %>
     <li class="list-group-item"><%= movie.title %> <%= movie.overview %></li>
   <% end %>
 </ul>
 
-<%= link_to "Back to List", lists_path %>
+
+<%= link_to "Back to List", root_path %>
